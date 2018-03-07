@@ -1,0 +1,15 @@
+{
+  "name": "MyPackage",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "gulpjs/gulp#4.0",
+    "gulp-cli": "gulpjs/gulp-cli",
+    "gulp-csso": "^3.0.1",
+    "gulp-stylus": "^2.7.0",
+    "install": "^0.10.4",
+    "gulp-load-plugins": "^1.5.0"
+  }
+  
+}
