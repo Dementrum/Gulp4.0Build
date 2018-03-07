@@ -1,15 +1,28 @@
 {
-  "name": "MyPackage",
+  "name": "Gulp4.0Build",
   "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dementrum/Gulp4.0Build.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dementrum/Gulp4.0Build/issues"
+  },
+  "homepage": "https://github.com/Dementrum/Gulp4.0Build#readme",
   "devDependencies": {
-    "gulp": "gulpjs/gulp#4.0",
-    "gulp-cli": "gulpjs/gulp-cli",
+    "gulp": "github:gulpjs/gulp#4.0",
     "gulp-csso": "^3.0.1",
-    "gulp-stylus": "^2.7.0",
-    "install": "^0.10.4",
-    "gulp-load-plugins": "^1.5.0"
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-stylus": "^2.7.0"
   }
-  
 }
