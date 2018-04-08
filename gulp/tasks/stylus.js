@@ -7,6 +7,12 @@ module.exports = function () {
 			.pipe($.gp.stylus({
 				'include css':true
 			}))
+			 .on('error', $.gp.notify.onError(function (error) {
+			 return {
+                title: 'Stylus',
+				message: error.message
+			 };
+            }))
 			.pipe($.gp.autoprefixer({
 				browsers : [
 					'last 10 version',
@@ -16,10 +22,6 @@ module.exports = function () {
 					'Opera 12.1'
 				],
 
-			}))
-			.on("error",$.gp.notify.onError({
-				message: "Error: <%= error.message %>",
-				title: "Style"
 			}))
 			.pipe($.gp.csso())
 			.pipe($.gp.sourcemaps.write())

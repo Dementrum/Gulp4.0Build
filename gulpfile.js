@@ -2,6 +2,7 @@
 
 global.$ = {
 	gulp: require('gulp'),
+	del: require('del'),
 	gp : require('gulp-load-plugins')(),
 	bs: require('browser-sync').create(),
 	
@@ -15,11 +16,13 @@ $.path.tasks.forEach(function (taskPath){
 });
 
 $.gulp.task('default',$.gulp.series(
-	$.gulp.parallel('pug','stylus','scripts:lib','scripts'),
+	'clean',
+	$.gulp.parallel('pug','stylus','scripts:lib','scripts','svg','img:dev'),
 	$.gulp.parallel('watch','serve')
 ));
 
 $.gulp.task('build',$.gulp.series(
-	$.gulp.parallel('pug','stylus','scripts:lib','scripts'),
+	'clean',
+	$.gulp.parallel('pug','stylus','scripts:lib','scripts','svg','img:build'),
 	$.gulp.parallel('watch','serve')
 ));
